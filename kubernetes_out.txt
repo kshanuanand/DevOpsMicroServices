@@ -1,0 +1,16 @@
+pod/predictor created
+NAME                                READY   STATUS              RESTARTS   AGE
+nginx-deployment-7fd6966748-gnr2d   1/1     Running             1          18d
+nginx-deployment-7fd6966748-gs6q4   1/1     Running             1          18d
+nginx-deployment-7fd6966748-tkl2q   1/1     Running             1          18d
+predictor                           0/1     ContainerCreating   0          0s
+Try 1
+NAME                                READY   STATUS    RESTARTS   AGE
+nginx-deployment-7fd6966748-gnr2d   1/1     Running   1          18d
+nginx-deployment-7fd6966748-gs6q4   1/1     Running   1          18d
+nginx-deployment-7fd6966748-tkl2q   1/1     Running   1          18d
+predictor                           1/1     Running   0          11s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
+
