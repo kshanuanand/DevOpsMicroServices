@@ -1,3 +1,75 @@
+ec2-user:~/environment/DevOps_Microservices/project-ml-microservice-kubernetes (master) $ ./run_docker.sh 
+Sending build context to Docker daemon  1.084MB
+Step 1/6 : FROM python:3.7.3-stretch
+ ---> 34a518642c76
+Step 2/6 : WORKDIR /app
+ ---> Using cache
+ ---> 4d918f5ac23d
+Step 3/6 : COPY . app.py /app/
+ ---> Using cache
+ ---> 6291db3ca696
+Step 4/6 : RUN pip install --upgrade pip &&                pip install -r requirements.txt
+ ---> Running in 0c8c994a5ead
+Collecting pip
+  Downloading https://files.pythonhosted.org/packages/4e/5f/528232275f6509b1fff703c9280e58951a81abe24640905de621c9f81839/pip-20.2.3-py2.py3-none-any.whl (1.5MB)
+Installing collected packages: pip
+  Found existing installation: pip 19.1.1
+    Uninstalling pip-19.1.1:
+      Successfully uninstalled pip-19.1.1
+Successfully installed pip-20.2.3
+Collecting Click==7.0
+  Downloading Click-7.0-py2.py3-none-any.whl (81 kB)
+Collecting Flask==1.0.2
+  Downloading Flask-1.0.2-py2.py3-none-any.whl (91 kB)
+Collecting itsdangerous==1.1.0
+  Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+Collecting Jinja2==2.10.3
+  Downloading Jinja2-2.10.3-py2.py3-none-any.whl (125 kB)
+Collecting MarkupSafe==1.1.1
+  Downloading MarkupSafe-1.1.1-cp37-cp37m-manylinux1_x86_64.whl (27 kB)
+Collecting numpy==1.17.2
+  Downloading numpy-1.17.2-cp37-cp37m-manylinux1_x86_64.whl (20.3 MB)
+Collecting pandas==0.24.2
+  Downloading pandas-0.24.2-cp37-cp37m-manylinux1_x86_64.whl (10.1 MB)
+Collecting python-dateutil==2.8.0
+  Downloading python_dateutil-2.8.0-py2.py3-none-any.whl (226 kB)
+Collecting pytz==2019.3
+  Downloading pytz-2019.3-py2.py3-none-any.whl (509 kB)
+Collecting scikit-learn==0.20.3
+  Downloading scikit_learn-0.20.3-cp37-cp37m-manylinux1_x86_64.whl (5.4 MB)
+Collecting scipy==1.3.1
+  Downloading scipy-1.3.1-cp37-cp37m-manylinux1_x86_64.whl (25.2 MB)
+Collecting six==1.12.0
+ * Serving Flask app "app" (lazy loading)
+  Downloading six-1.12.0-py2.py3-none-any.whl (10 kB)
+Collecting Werkzeug==0.16.0
+  Downloading Werkzeug-0.16.0-py2.py3-none-any.whl (327 kB)
+Installing collected packages: Click, Werkzeug, MarkupSafe, Jinja2, itsdangerous, Flask, numpy, six, python-dateutil, pytz, pandas, scipy, scikit-learn
+Successfully installed Click-7.0 Flask-1.0.2 Jinja2-2.10.3 MarkupSafe-1.1.1 Werkzeug-0.16.0 itsdangerous-1.1.0 numpy-1.17.2 pandas-0.24.2 python-dateutil-2.8.0 pytz-2019.3 scikit-learn-0.20.3 scipy-1.3.1 six-1.12.0
+Removing intermediate container 0c8c994a5ead
+ ---> ca4cfc687f5f
+Step 5/6 : EXPOSE 80
+ ---> Running in 10be010846b4
+Removing intermediate container 10be010846b4
+ ---> 9547d9960f79
+Step 6/6 : CMD ["python3","app.py"]
+ ---> Running in e6546c181f1f
+Removing intermediate container e6546c181f1f
+ ---> 0f63b780123e
+Successfully built 0f63b780123e
+Successfully tagged kshanuanand/predictor:0.1
+REPOSITORY              TAG                 IMAGE ID            CREATED                  SIZE
+kshanuanand/predictor   0.1                 0f63b780123e        Less than a second ago   1.24GB
+<none>                  <none>              3983116a887d        14 minutes ago           930MB
+<none>                  <none>              c174d895e46a        23 minutes ago           1.24GB
+lambci/lambda           nodejs8.10          c06eeef9103d        2 weeks ago              814MB
+lambci/lambda           python3.6           c7e6b321f404        3 weeks ago              891MB
+lambci/lambda           python2.7           1a15b4d8e516        3 weeks ago              761MB
+lambci/lambda           python3.8           4e043154ed59        3 weeks ago              520MB
+lambci/lambda           nodejs12.x          436ae53fb559        3 weeks ago              384MB
+lambci/lambda           nodejs10.x          7366faf17741        3 weeks ago              380MB
+lambci/lambda           python3.7           b599411b8814        5 weeks ago              944MB
+python                  3.7.3-stretch       34a518642c76        15 months ago            929MB
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
