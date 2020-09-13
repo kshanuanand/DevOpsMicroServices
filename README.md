@@ -1,4 +1,4 @@
-[![CircleCI](https://circleci.com/gh/kshanuanand/DevOpsMicroServices/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/kshanuanand/DevOpsMicroServices/tree/teesloane-patch-5)>
+[![CircleCI](https://circleci.com/gh/kshanuanand/DevOpsMicroServices/tree/teesloane-patch-5.svg?style=svg)](https://circleci.com/gh/kshanuanand/DevOpsMicroServices/tree/teesloane-patch-5)
 
 ## Project Overview
 
